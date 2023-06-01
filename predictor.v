@@ -1,5 +1,5 @@
 module predictor(input wire request, result, clk, taken, output reg prediction);
-    reg [1:0] ph;
+    reg [1:0] ph = 2'b11;
 
     always @(posedge clk, posedge request) begin
         if (request)
