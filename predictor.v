@@ -3,7 +3,7 @@ module predictor(input wire request, result, clk, taken, output reg prediction);
 
     always @(posedge clk, posedge request) begin
         if (request)
-            prediction = ph[1];
+            prediction = (ph > 2'b01);
     end
 
     always @(posedge clk, posedge result) begin
